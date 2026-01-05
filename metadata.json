@@ -1,0 +1,7 @@
+{
+  "name": "MITM NetGuard - Mobile Network Threat Detection",
+  "description": "A real-time cybersecurity monitoring dashboard for detecting MITM, SSL stripping, and DNS hijacking in public Wi-Fi environments using behavioral and cryptographic analysis.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
