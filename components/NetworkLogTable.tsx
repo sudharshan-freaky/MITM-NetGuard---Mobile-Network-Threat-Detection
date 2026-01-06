@@ -17,8 +17,7 @@ const NetworkLogTable: React.FC<NetworkLogTableProps> = ({ logs }) => {
             <th className="pb-2 font-medium">Domain</th>
             <th className="pb-2 font-medium">Protocol</th>
             <th className="pb-2 font-medium">Lat.</th>
-            <th className="pb-2 font-medium">Fingerprint</th>
-            <th className="pb-2 font-medium">Status</th>
+            <th className="pb-2 font-medium text-right">Status</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-slate-800">
@@ -31,9 +30,8 @@ const NetworkLogTable: React.FC<NetworkLogTableProps> = ({ logs }) => {
                 </span>
               </td>
               <td className="py-3 text-slate-400">{log.latency}ms</td>
-              <td className="py-3 font-mono text-slate-500 text-[10px]">{log.fingerprint.substring(0, 11)}...</td>
-              <td className="py-3">
-                <span className={`w-2 h-2 rounded-full inline-block ${log.status === 'secure' ? 'bg-emerald-500 shadow-lg shadow-emerald-500/50' : 'bg-red-500 animate-pulse'}`}></span>
+              <td className="py-3 text-right">
+                <span className={`w-2.5 h-2.5 rounded-full inline-block ${log.status === 'secure' ? 'bg-emerald-500 shadow-lg shadow-emerald-500/50' : 'bg-red-500 animate-pulse'}`}></span>
               </td>
             </tr>
           ))}
